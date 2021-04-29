@@ -17,6 +17,7 @@ public class Contratacao {
 		this.funcionario = funcionario;
 		this.data = data;
 		this.cargo = cargo;
+		this.projeto.adicionaContratacao(this);
 	}
 	
 	public void pendente() {
@@ -30,5 +31,22 @@ public class Contratacao {
 	public void demitir() {
 		this.status = Status.DEMITIDO;
 	}
+
+	public Projeto getProjeto() {
+		return projeto;
+	}
+
+	public Funcionario getFuncionario() {
+		return funcionario;
+	}
+	
+	public Status getStatus() {
+		return status;
+	}
+	
+	public boolean isDemitido() {
+		return status == Status.DEMITIDO;
+	}
+	
 
 }

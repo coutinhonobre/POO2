@@ -29,9 +29,37 @@ public class Projeto {
 	}
 	
 	public void listarContratacao() {
-		for(Contratacao contratacao : contratacoes) {
-			System.out.println(contratacao.toString());
+		if(!contratacoes.isEmpty()) System.out.println("***Contratações***");
+		
+		for(Projeto projeto : listarProjetos()) {
+			System.out.println(projeto.toString());
+			listarFuncionarios(projeto);
 		}
+	}
+	
+	private List<Projeto> listarProjetos() {
+		List<Projeto> projetos = new ArrayList<Projeto>();
+		
+		for(Contratacao contratacao: contratacoes) {
+			if(!projetos.contains(contratacao.getProjeto())) projetos.add(contratacao.getProjeto());
+		}
+		
+		return projetos;
+	}
+	
+	private void listarFuncionarios(Projeto projeto) {
+		System.out.println("Funcionario(s): ");
+		for(Contratacao contratacao : contratacoes) {
+			if(contratacao.getProjeto().equals(projeto) && !contratacao.isDemitido()) {
+				System.out.println(contratacao.getFuncionario().toString() + " [Status: " + contratacao.getStatus() + "]");
+			}
+		}
+		System.out.println("\n");
+	}
+	
+	@Override
+	public String toString() {
+		return "Projeto: ".concat(this.nome);
 	}
 
 }

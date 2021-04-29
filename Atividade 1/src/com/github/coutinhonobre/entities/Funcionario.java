@@ -13,6 +13,9 @@ public class Funcionario {
 		this.tipoDeDocumento = tipoDeDocumento;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return this.nome;
+	}
 
 }
