@@ -1,0 +1,9 @@
+package com.github.coutinhonobre.entities.enums.copy;
+
+public enum Cargo {
+	DIRETOR,
+	ANALISTA,
+	ASSESSOR,
+	TECNICO,
+	ADMINISTRATIVO
+}

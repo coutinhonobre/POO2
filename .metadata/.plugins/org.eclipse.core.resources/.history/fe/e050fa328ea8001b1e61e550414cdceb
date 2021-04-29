@@ -1,0 +1,13 @@
+package com.github.coutinhonobre.entities;
+
+import java.util.Date;
+import com.github.coutinhonobre.entities.enums.Cargo;
+import com.github.coutinhonobre.entities.enums.Status;
+
+public class Contratacao {
+	
+	private Date data;
+	private Cargo cargo;
+	private Status status;
+
+}

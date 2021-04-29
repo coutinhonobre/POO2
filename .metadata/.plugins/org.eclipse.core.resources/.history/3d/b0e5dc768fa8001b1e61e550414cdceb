@@ -20,12 +20,14 @@ public class Projeto {
 	
 	
 	public boolean adicionaContratacao(Contratacao contratacao) {
-		return contratacoes.add(contratacao);
+		contratacoes.add(contratacao);
+		return true;
 	}
 	
 	
 	public boolean removeContacao(Contratacao contracao) {
-		return contratacoes.remove(contracao);
+		contratacoes.remove(contratacao);
+		return true;
 	}
 	
 	public void listarContratacao() {

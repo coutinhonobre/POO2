@@ -1,0 +1,9 @@
+package com.github.coutinhonobre.entities.enums.copy;
+
+public enum Status {
+	
+	PENDENTE,
+	CONTRATADO,
+	DEMITIDO
+
+}
